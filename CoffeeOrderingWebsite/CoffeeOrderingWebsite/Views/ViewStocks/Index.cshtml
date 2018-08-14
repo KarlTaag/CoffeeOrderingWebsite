@@ -1,13 +1,19 @@
-﻿
+﻿@using System.Web.Optimization
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Stocks";
 }
 
-@using System.Web.Optimization
+@section styles {
+    @Styles.Render("~/Content/css/stocks.css")
+}
 
 @section body {
-    <div id="chartContainer2" style="height: 300px; width: 100%;">
-
+    <div id="stocks">
+        <div class="remaining-stocks"></div>
+        <div class="refresh-stocks">
+            @Html.ActionLink("Refresh supplies", "Refresh", "ViewStocks")
+         </div>      
     </div>
 }
 

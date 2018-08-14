@@ -1,3 +1,7 @@
 ﻿#history .margin {
   margin-bottom: 20px;
 }
+#history .distribution {
+  height: 300px;
+  width: 100%;
+}

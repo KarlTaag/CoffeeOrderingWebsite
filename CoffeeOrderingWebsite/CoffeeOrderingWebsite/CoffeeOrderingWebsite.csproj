@@ -138,6 +138,7 @@
     <Content Include="Content\css\history.css" />
     <Content Include="Content\css\home.css" />
     <Content Include="Content\css\selection.css" />
+    <Content Include="Content\css\stocks.css" />
     <Content Include="Content\scripts\history.js" />
     <Content Include="Content\scripts\stocks.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -177,10 +178,10 @@
     <Content Include="Views\ViewHistory\Index.cshtml" />
     <Content Include="Views\ViewStocks\Index.cshtml" />
     <Content Include="Views\ViewHistory\PartialViews\_History.cshtml" />
-    <Content Include="Views\ViewHistory\PartialViews\_Distribution.cshtml" />
     <Content Include="Content\less\common.less" />
     <Content Include="Content\less\selection.less" />
     <Content Include="Content\less\history.less" />
+    <Content Include="Content\less\stocks.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

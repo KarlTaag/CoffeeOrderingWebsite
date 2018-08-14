@@ -18,7 +18,5 @@
 };
 
 $(document).ready(function () {
-    $("#chartContainer2").CanvasJSChart(options2);
-
-
+    $(".remaining-stocks").CanvasJSChart(options2);
 });

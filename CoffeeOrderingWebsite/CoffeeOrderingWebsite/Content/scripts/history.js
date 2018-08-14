@@ -18,7 +18,5 @@
 };
 
 $(document).ready(function () {
-    $("#chartContainer").CanvasJSChart(options);
-
-
+    $(".distribution").CanvasJSChart(options);
 });

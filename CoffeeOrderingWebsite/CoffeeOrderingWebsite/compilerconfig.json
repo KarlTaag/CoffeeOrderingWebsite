@@ -14,5 +14,9 @@
   {
     "outputFile": "Content/css/history.css",
     "inputFile": "Content/less/history.less"
+  },
+  {
+    "outputFile": "Content/css/stocks.css",
+    "inputFile": "Content/less/stocks.less"
   }
 ]
