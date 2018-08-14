@@ -1,0 +1,26 @@
+﻿@using System.Web.Optimization
+
+@{
+    ViewBag.Title = "View History";
+}
+
+@section styles{
+    @Styles.Render("~/Content/css/history.css")
+}
+
+@section body {
+    <div id="history">
+        <div class="margin">
+            <h3>Record of drinks ordered</h3>
+            @{ Html.RenderPartial("~/Views/ViewHistory/PartialViews/_History.cshtml"); }
+        </div>
+        <div class="margin">
+            @{ Html.RenderPartial("~/Views/ViewHistory/PartialViews/_Distribution.cshtml"); }
+        </div>
+    </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/Content/scripts/history.js")
+}
+

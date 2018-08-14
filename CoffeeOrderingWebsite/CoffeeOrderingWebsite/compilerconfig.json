@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/css/home.css",
+    "inputFile": "Content/less/home.less"
+  },
+  {
+    "outputFile": "Content/css/common.css",
+    "inputFile": "Content/less/common.less"
+  },
+  {
+    "outputFile": "Content/css/selection.css",
+    "inputFile": "Content/less/selection.less"
+  },
+  {
+    "outputFile": "Content/css/history.css",
+    "inputFile": "Content/less/history.less"
+  }
+]
