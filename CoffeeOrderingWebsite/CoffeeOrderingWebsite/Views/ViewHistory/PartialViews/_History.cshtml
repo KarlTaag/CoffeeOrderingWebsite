@@ -1,4 +1,7 @@
-﻿<div class="table-responsive">
+﻿@using CoffeeOrderingWebsite.Models
+@model List<OrderHistory>
+
+<div class="table-responsive">
     <table class="table">
         <thead>
             <tr>
@@ -8,11 +11,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Flat White</td>
-                <td>2018-08-14</td>
-            </tr>
+            @foreach(var orderHistory in Model)
+            { 
+                <tr>
+                    <td>@orderHistory.ID</td>
+                    <td>@orderHistory.DrinkName</td>
+                    <td>@orderHistory.OrderTime.ToString("MMM d yyyy hh:mm:ss tt")</td>
+                </tr>
+            }          
         </tbody>
     </table>
 </div>

@@ -1,4 +1,6 @@
 ﻿@using System.Web.Optimization
+@using CoffeeOrderingWebsite.Models.ViewModels
+@model StocksViewModel
 
 @{
     ViewBag.Title = "Stocks";
@@ -18,5 +20,9 @@
 }
 
 @section scripts {
+    <script type="text/javascript">
+        var stocksDataPoints = JSON.parse('@Html.Raw(Model.SerializeDataPoints())');
+    </script>
+
     @Scripts.Render("~/Content/scripts/stocks.js")
 }

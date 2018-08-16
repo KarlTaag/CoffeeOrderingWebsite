@@ -11,10 +11,11 @@
 @section body {
     <div id="home">
         <div class="row link-container">
-            <div class="col-md-4 link">@Html.ActionLink("Select your coffee", "Index", "CoffeeSelection")</div>
-            <div class="col-md-4 link">@Html.ActionLink("View order history", "Index", "ViewHistory")</div>
-            <div class="col-md-4 link">@Html.ActionLink("View remaining stocks", "Index", "ViewStocks")</div>
-        </div>
+            <div class="col-md-3 link">@Html.ActionLink("Select your coffee", "Index", "CoffeeSelection")</div>
+            <div class="col-md-3 link">@Html.ActionLink("View order history", "Index", "ViewHistory")</div>
+            <div class="col-md-3 link">@Html.ActionLink("View remaining stocks", "Index", "ViewStocks")</div>
+            <div class="col-md-3 link">@Html.ActionLink("Clear all records", "Clear", "Home")</div>
+        </div>        
     </div>
 }
 

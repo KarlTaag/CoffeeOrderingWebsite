@@ -1,4 +1,6 @@
 ﻿@using System.Web.Optimization
+@using CoffeeOrderingWebsite.Models.ViewModels
+@model DrinksViewModel
 
 @{
     ViewBag.Title = "Coffee Selection";
@@ -12,21 +14,35 @@
     <div id="selection">
         <div class="container">
             <h3>Available options</h3>
-            <form>
-                <label class="radio-inline">
-                    <input type="radio" name="DoubleAmericano" checked>Double Americano
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="SweetLatte">Sweet Latte
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="FlatWhite">Flat White
-                </label>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-        <div class="result">
-            Your order is successfully placed!
+            @{
+                if (Model.IsSubmitSuccessful)
+                {
+                    <div class="result">
+                        Your order is successfully placed!
+                    </div>
+                }
+                else
+                {
+                    if (Model.AvailableDrinks.Count > 0)
+                    {
+                        using (Html.BeginForm())
+                        {
+                            foreach (var drink in Model.AvailableDrinks)
+                            {
+                                <div>
+                                    @Html.RadioButtonFor(x => x.SelectedDrink, drink.ID, new { id = "drink" + drink.ID })
+                                    @Html.Label("drink" + drink.ID, drink.Name)
+                                </div>
+                            }
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                        }
+                    }
+                    else
+                    {
+                        <div>There's not enough ingredient to create a drink. Please refresh stock.</div>
+                    }
+                }
+            }
         </div>
     </div>
 }
